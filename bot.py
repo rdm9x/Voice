@@ -30,7 +30,7 @@ async def show_users(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
     if not users:
         await update.message.reply_text("Нет пользователей в базе данных.")
     else:
-        user_list = "\n".join([f"{user[0]}: {user[1]} ({user[2]})" for user in users])
+        user_list = "\n".join([f"{user[0]}: {user[1]}" for user in users])
         await update.message.reply_text(f"Пользователи:\n{user_list}")
 
 # Определяем команду /register
